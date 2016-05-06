@@ -1,7 +1,3 @@
-# reverseio
-go package for reading files from end to start.
-
-```go
 package reverseio
 
 import (
@@ -9,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func Example() {
 	r := NewLineReader(strings.NewReader("Hello\nworld!"))
 
 	line, _ := r.ReadString()
@@ -22,4 +18,3 @@ func main() {
 	// world!
 	// Hello
 }
-```
