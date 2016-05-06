@@ -2,15 +2,17 @@
 go package for reading files from end to start.
 
 ```go
-package reverseio
+package main
 
 import (
 	"fmt"
 	"strings"
+
+	"github.com/crazytyper/reverseio"
 )
 
 func main() {
-	r := NewLineReader(strings.NewReader("Hello\nworld!"))
+	r := reverseio.NewLineReader(strings.NewReader("Hello\nworld!"))
 
 	line, _ := r.ReadString()
 	fmt.Println(line)
